@@ -1,0 +1,25 @@
+{% extends "layouts/main.html" %}
+
+{% set pageName="Home" %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <a href="index" class="govuk-back-link">Back
+      </a>
+      <form action="what_ice_cream_do_you_like" method="post" novalidate>
+        <div class="govuk-form-group">
+          <h1 class="govuk-label-wrapper">
+            <label class="govuk-label govuk-label--l" for="ice_cream_flavour">
+              What ice cream do you like {{ data['fullName'] }}?
+            </label>
+          </h1>
+          <input class="govuk-input" id="ice_cream_flavour" name="ice_cream_flavour" type="text" value="{{data['ice_cream_flavour']}}">
+        </div>
+        <button type="submit" class="govuk-button" data-module="govuk-button">
+          Save and continue
+        </button>
+      </form>
+    </div>
+  </div>
+{% endblock %}
