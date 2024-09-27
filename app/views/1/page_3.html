@@ -30,21 +30,23 @@
               {{ data['whereDoYouLive'] }}
             </dd>
             <dd class="govuk-summary-list__actions">
-              <a class="govuk-link" href="index">Change<span class="govuk-visually-hidden"> Where do you live?</span></a>
+              <a class="govuk-link" href="index">Change<span class="govuk-visually-hidden"> Where do you
+                  live?</span></a>
             </dd>
           </div>
           {% if (data['warmWeatherAnswer']) %}
-            <div class="govuk-summary-list__row">
-              <dt class="govuk-summary-list__key">
-                 Do you like warm weather?
-              </dt>
-              <dd class="govuk-summary-list__value">
-                {{ data['warmWeatherAnswer'] }}
-              </dd>
-              <dd class="govuk-summary-list__actions">
-                <a class="govuk-link" href="optional">Change<span class="govuk-visually-hidden"> Where do you live?</span></a>
-              </dd>
-            </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Do you like warm weather?
+            </dt>
+            <dd class="govuk-summary-list__value">
+              {{ data['warmWeatherAnswer'] }}
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="optional">Change<span class="govuk-visually-hidden"> Where do you
+                  live?</span></a>
+            </dd>
+          </div>
           {% endif %}
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
@@ -65,12 +67,14 @@
               {{ data['ice_cream_flavour'] }}
             </dd>
             <dd class="govuk-summary-list__actions">
-              <a class="govuk-link" href="what_ice_cream_do_you_like">Change<span class="govuk-visually-hidden"> What ice cream do you like?</span></a>
+              <a class="govuk-link" href="what_ice_cream_do_you_like">Change<span class="govuk-visually-hidden"> What
+                  ice cream do you like?</span></a>
             </dd>
           </div>
         </dl>
         <h2 class="govuk-heading-m">Now send your application</h2>
-        <p class="govuk-body">By submitting this application you are confirming that, to the best of your knowledge, the details you are providing are correct.</p>
+        <p class="govuk-body">By submitting this application you are confirming that, to the best of your knowledge, the
+          details you are providing are correct.</p>
         <form action="page_3" method="post" novalidate>
           <input type="hidden" name="answers-checked" value="true">
           <button type="submit" class="govuk-button" data-module="govuk-button">
