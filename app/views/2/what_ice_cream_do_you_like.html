@@ -20,7 +20,7 @@
           {% if (data['fullName']=='Rich') %}
             <p class="govuk-body">Rich enjoys strawberry</p>
           {% endif %}
-          {% if (data['fullName']=='Rich' || =='Dawn') %}
+          {% if data['fullName'] == ('Rich') or data['fullName'] == ('Dawn') %}
             <p class="govuk-body">I heard Dawn and Rich are great</p>
           {% endif %}
           <input class="govuk-input" id="ice_cream_flavour" name="ice_cream_flavour" type="text" value="{{data['ice_cream_flavour']}}">
