@@ -1,0 +1,48 @@
+{% extends "layouts/main.html" %}
+
+{% set pageName="Home" %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <a href="index" class="govuk-back-link">Back
+      </a>
+      <form action="what_ice_cream_do_you_like" method="post" novalidate>
+        <div class="govuk-form-group">
+          <h1 class="govuk-label-wrapper">
+            <label class="govuk-label govuk-label--l" for="ice_cream_flavour">
+              What ice cream do you like {{ data['fullName'] }}
+            </label>
+          </h1>
+          {% if (data['fullName']=='Dawn') %}
+            <p class="govuk-body">Dawn enjoys ice-cream</p>
+          {% endif %}
+          {% if (data['fullName']=='Rich') %}
+            <p class="govuk-body">Rich enjoys strawberry</p>
+          {% endif %}
+          {% if data['fullName'] == ('Rich') or data['fullName'] == ('Dawn') %}
+            <p class="govuk-body">I heard Dawn and Rich are great</p>
+          {% endif %}
+          <input class="govuk-input" id="ice_cream_flavour" name="ice_cream_flavour" type="text" value="{{data['ice_cream_flavour']}}">
+        </div>
+        <details class="govuk-details">
+          <summary class="govuk-details__summary">
+            <span class="govuk-details__summary-text">
+              Popular flavours of ice cream
+            </span>
+          </summary>
+          <div class="govuk-details__text">
+            <ul>
+              <li>strawberry</li>
+              <li>chocolate</li>
+              <li>vanilla</li>
+            </ul>
+          </div>
+        </details>
+        <button type="submit" class="govuk-button" data-module="govuk-button">
+          Save and continue
+        </button>
+      </form>
+    </div>
+  </div>
+{% endblock %}
