@@ -14,6 +14,15 @@
               What ice cream do you like {{ data['fullName'] }}
             </label>
           </h1>
+          {% if (data['fullName']=='Dawn') %}
+            <p class="govuk-body">Dawn enjoys ice-cream</p>
+          {% endif %}
+          {% if (data['fullName']=='Rich') %}
+            <p class="govuk-body">Rich enjoys strawberry</p>
+          {% endif %}
+          {% if (data['fullName']=='Rich' || =='Dawn') %}
+            <p class="govuk-body">I heard Dawn and Rich are great</p>
+          {% endif %}
           <input class="govuk-input" id="ice_cream_flavour" name="ice_cream_flavour" type="text" value="{{data['ice_cream_flavour']}}">
         </div>
         <details class="govuk-details">
